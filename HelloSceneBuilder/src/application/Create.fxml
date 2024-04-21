@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="charImage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreateController">
+   <children>
+      <ImageView fx:id="charImageView" fitHeight="150.0" fitWidth="150.0" layoutX="466.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tempProfile.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="91.0" layoutY="29.0" text="Create your character!">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="123.0" text="Name:">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="charName" alignment="CENTER" layoutX="395.0" layoutY="18.0" prefHeight="28.0" prefWidth="291.0" text="No Name :(" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameInput" layoutX="67.0" layoutY="117.0" prefHeight="35.0" prefWidth="263.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="338.0" layoutY="119.0" mnemonicParsing="false" onAction="#saveName" text="Save">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="17.0" layoutY="210.0" text="Race:">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="raceChoiceBox" layoutX="67.0" layoutY="209.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="16.0" layoutY="297.0" text="Class:">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="classChoiceBox" layoutX="67.0" layoutY="296.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button layoutX="298.0" layoutY="747.0" mnemonicParsing="false" onAction="#createSheet" text="Next/Create">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Button>
+      <Slider fx:id="wisSlider" blockIncrement="1.0" layoutX="280.0" layoutY="692.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Slider fx:id="charismaSlider" blockIncrement="1.0" layoutX="468.0" layoutY="692.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Slider fx:id="intSlider" blockIncrement="1.0" layoutX="79.0" layoutY="692.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label fx:id="intLabel" layoutX="79.0" layoutY="652.0" prefHeight="23.0" prefWidth="140.0" text="Intelligence: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="wisLabel" layoutX="280.0" layoutY="652.0" prefHeight="23.0" prefWidth="140.0" text="Wisdom: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="charismaLabel" layoutX="471.0" layoutY="652.0" prefHeight="23.0" prefWidth="140.0" text="Charisma: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="strSlider" blockIncrement="1.0" layoutX="79.0" layoutY="578.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label fx:id="strLabel" layoutX="79.0" layoutY="539.0" prefHeight="23.0" prefWidth="140.0" text="Strength: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="dexSlider" blockIncrement="1.0" layoutX="280.0" layoutY="579.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label fx:id="dexLabel" layoutX="280.0" layoutY="539.0" prefHeight="23.0" prefWidth="140.0" text="Dexterity: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="conSlider" blockIncrement="1.0" layoutX="468.0" layoutY="579.0" majorTickUnit="3.0" max="18.0" min="3.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label fx:id="conLabel" layoutX="468.0" layoutY="539.0" prefHeight="23.0" prefWidth="140.0" text="Constitution: 3">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="levelSlider" blockIncrement="1.0" layoutX="468.0" layoutY="470.0" majorTickUnit="20.0" max="20.0" min="1.0" minorTickCount="19" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label fx:id="levelLabel" layoutX="471.0" layoutY="434.0" prefHeight="23.0" prefWidth="140.0" text="Level: 1">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="297.0" text="Background:">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="337.0" text="Subclass:">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="backgroundChoiceBox" layoutX="378.0" layoutY="296.0" prefHeight="25.0" prefWidth="163.0" />
+      <Line endX="300.0" layoutX="350.0" layoutY="400.0" startX="-300.0" />
+      <Label layoutX="178.0" layoutY="429.0" text="Ability Scores">
+         <font>
+            <Font name="Comic Sans MS Italic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

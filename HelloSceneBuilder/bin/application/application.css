@@ -1,0 +1,24 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button{
+	-fx-background-color: #4f3816;
+	-fx-background-insets: 3;
+	
+	-fx-border-color: #919090;
+	-fx-border-width: 3;
+	-fx-border-radius: 5;
+	
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+	
+	-fx-text-fill: #eeebeb;
+}
+
+.root{
+	-fx-background-image: url("../background.jpg");
+	-fx-border-color: #919090;
+	-fx-border-width: 2;
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
+.label{
+	-fx-text-fill: #990000;
+}
